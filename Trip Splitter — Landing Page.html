@@ -187,9 +187,18 @@
   .safety-item p { color: var(--text-dim); font-size: 14px; line-height: 1.6; font-weight: 500; }
 
   footer {
-    text-align:center; padding: 30px 24px 40px; color: var(--text-dim); font-size: 13px; font-weight:600;
+    text-align:center; padding: 36px 24px 44px; color: var(--text-dim); font-size: 13px; font-weight:600;
     border-top: 1px solid var(--border);
   }
+  .footer-links {
+    display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-bottom: 14px;
+  }
+  .footer-links a {
+    color: var(--text); text-decoration: none; font-weight: 700; font-size: 14px;
+    padding: 6px 2px; border-bottom: 2px solid transparent;
+  }
+  .footer-links a:hover { border-bottom-color: var(--amber); }
+  .footer-note { color: var(--text-dim); }
 
   @media (max-width: 560px) {
     .hero h1 { font-size: 36px; }
@@ -265,7 +274,7 @@
 <div class="cta" id="download">
   <h2>Ready for your next trip?</h2>
   <p>Download Trip Splitter and never argue over bills again.</p>
-  <a href="#" class="btn-primary" id="downloadBtn">⬇ Download APK</a>
+  <a href="https://github.com/sunnyptl95/trip-splitter/releases/download/v1.0.0/Trip-Splitter.apk" class="btn-primary" id="downloadBtn" download>⬇ Download APK</a>
 </div>
 
 <section class="install-guide" id="how-to-install">
@@ -340,7 +349,12 @@
 </section>
 
 <footer>
-  Trip Splitter — built independently.
+  <div class="footer-links">
+    <a href="https://github.com/sunnyptl95/trip-splitter" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://t.me/OgAuraMan" target="_blank" rel="noopener">Telegram</a>
+    <a href="mailto:mremojiii05@gmail.com">mremojiii05@gmail.com</a>
+  </div>
+  <div class="footer-note">Trip Splitter — built independently.</div>
 </footer>
 
 <script>
@@ -356,10 +370,7 @@
     try { localStorage.setItem('ts-theme', next); } catch(e) {}
   });
 
-  document.getElementById('downloadBtn').addEventListener('click', function(e) {
-    e.preventDefault();
-    alert('APK link not connected yet — replace the href on this button once your APK is hosted (GitHub Releases, your own server, or your Play Store link).');
-  });
+
 </script>
 
 </body>
